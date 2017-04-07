@@ -19,20 +19,26 @@ public class MatrizTrans {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int matriz[][] = new int [4][4];
+        /*int matriz[][] = new int [4][4];
         int asig = 1;
         for(int i = 0; i < 4;i++){
           for(int j = 0; j <4; j++){
               matriz[i][j] = asig;
           }
           asig = asig+1;
-        }
-        
+        }*/
+        int matriz2[][] = new int [4][4];
+        int matrizt[][]= new int[4][4];
+         matriz2 = llenarMatriz();
+         mostrar(matriz2);
+         System.out.println("Transponer:");
+         matrizt = transponer(matriz2);
+         mostrar(matrizt);
          
         
         
     }
-    public int[][] transponer(int mat[][]){
+    public static int[][] transponer(int mat[][]){
      int matrizT[][] = new int[4][4];
      
      for(int i = 0; i < mat.length;i++){
@@ -45,7 +51,7 @@ public class MatrizTrans {
         return matrizT;
     }
     
-    public void mostrar(int matriz[][]){
+    public static void mostrar(int matriz[][]){
       for(int i=0;i<4;i++){
        for(int j=0;j<4;j++){
        if(!(j == 3)){
@@ -57,7 +63,7 @@ public class MatrizTrans {
        }
       }
     
-     public int[][] llenarMatriz(){
+     public static int[][] llenarMatriz(){
      int matriz[][] = new int[4][4];
      
      Scanner leer = new Scanner(System.in);
